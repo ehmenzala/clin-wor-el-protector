@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj3yr8eevg1ss"]
+
+[ext_resource type="Texture2D" uid="uid://di27sad7ulde7" path="res://assets/images/earth.png" id="1_2j761"]
+[ext_resource type="Texture2D" uid="uid://cnfrq1s35s3g7" path="res://assets/images/clin-wor-portrait-lq.png" id="2_mgsog"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 884.0
+offset_top = 391.0
+offset_right = 1120.0
+offset_bottom = 613.0
+texture_normal = ExtResource("1_2j761")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 614.0
+offset_top = 189.0
+offset_right = 899.0
+offset_bottom = 236.0
+text = "Jugar"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 612.0
+offset_top = 252.0
+offset_right = 896.0
+offset_bottom = 300.0
+text = "Salir"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 641.0
+offset_bottom = 648.0
+texture = ExtResource("2_mgsog")
