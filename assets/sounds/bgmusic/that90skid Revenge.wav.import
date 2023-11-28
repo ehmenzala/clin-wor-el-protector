@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c763v1q51bgfd"
+path="res://.godot/imported/that90skid Revenge.wav-eec1124fbc14d93a8436881e0be51c48.sample"
+
+[deps]
+
+source_file="res://assets/sounds/bgmusic/that90skid Revenge.wav"
+dest_files=["res://.godot/imported/that90skid Revenge.wav-eec1124fbc14d93a8436881e0be51c48.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

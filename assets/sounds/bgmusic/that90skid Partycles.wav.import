@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cdnhg3j68mdy8"
+path="res://.godot/imported/that90skid Partycles.wav-b3e40b9a5fadac90e6d09264c5ee0f54.sample"
+
+[deps]
+
+source_file="res://assets/sounds/bgmusic/that90skid Partycles.wav"
+dest_files=["res://.godot/imported/that90skid Partycles.wav-b3e40b9a5fadac90e6d09264c5ee0f54.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
