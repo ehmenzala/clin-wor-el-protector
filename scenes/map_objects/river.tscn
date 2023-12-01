@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://r4l1uc67gpde"]
+
+[ext_resource type="Texture2D" uid="uid://dsspbo0impqda" path="res://assets/tilesets/fourseasons-tileset-v2/foreground_/foreground_.png" id="1_xhdb7"]
+[ext_resource type="Script" path="res://scenes/map_objects/river.gd" id="2_q78oa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_504sp"]
+atlas = ExtResource("1_xhdb7")
+region = Rect2(0, 48, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktfnr"]
+atlas = ExtResource("1_xhdb7")
+region = Rect2(32, 48, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fw37a"]
+atlas = ExtResource("1_xhdb7")
+region = Rect2(64, 48, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiabf"]
+atlas = ExtResource("1_xhdb7")
+region = Rect2(96, 48, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gq8hq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_504sp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktfnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fw37a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiabf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(369, 278)
+sprite_frames = SubResource("SpriteFrames_gq8hq")
+animation = &"idle"
+script = ExtResource("2_q78oa")
