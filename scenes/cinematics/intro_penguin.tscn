@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://b2nnd5ltoytkp"]
+[gd_scene load_steps=11 format=3 uid="uid://b2nnd5ltoytkp"]
 
 [ext_resource type="Texture2D" uid="uid://bip6fy18h0ptw" path="res://assets/sprites/black-background.png" id="1_k44d1"]
+[ext_resource type="Script" path="res://scenes/cinematics/intro_penguin.gd" id="1_p533l"]
 [ext_resource type="AudioStream" uid="uid://cb8ewimdjqgk7" path="res://assets/sounds/soundfx/vintage-cam-tiquitiquitiqui.wav" id="2_wienm"]
 [ext_resource type="AudioStream" uid="uid://dvtdhajomdclu" path="res://assets/sounds/soundfx/camera-tink-and-shoot.wav" id="3_daljs"]
 [ext_resource type="Texture2D" uid="uid://sjd680gr4dcw" path="res://assets/images/cinematics/penguin/intro/1.png" id="4_6vev5"]
@@ -127,6 +128,7 @@ _data = {
 }
 
 [node name="intro_penguin" type="Node2D"]
+script = ExtResource("1_p533l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(578, 327.25)
@@ -159,7 +161,10 @@ offset_bottom = 347.0
 theme_override_fonts/font = ExtResource("6_ov74k")
 theme_override_font_sizes/font_size = 32
 text = "Capitulo 2: Hogar de Steban"
+horizontal_alignment = 1
 
 [node name="cam_tink" type="AudioStreamPlayer2D" parent="."]
 
 [node name="vintage_cam" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

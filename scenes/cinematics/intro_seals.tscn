@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://de05tlmipo17e"]
+[gd_scene load_steps=11 format=3 uid="uid://de05tlmipo17e"]
 
 [ext_resource type="Texture2D" uid="uid://bip6fy18h0ptw" path="res://assets/sprites/black-background.png" id="1_rp6r4"]
+[ext_resource type="Script" path="res://scenes/cinematics/intro_seals.gd" id="1_xfd4t"]
 [ext_resource type="AudioStream" uid="uid://cb8ewimdjqgk7" path="res://assets/sounds/soundfx/vintage-cam-tiquitiquitiqui.wav" id="2_jioc6"]
 [ext_resource type="AudioStream" uid="uid://dvtdhajomdclu" path="res://assets/sounds/soundfx/camera-tink-and-shoot.wav" id="3_gq1vg"]
 [ext_resource type="Texture2D" uid="uid://dsvhs4p02j6yl" path="res://assets/images/cinematics/seals/intro/1.png" id="4_2jwmh"]
@@ -127,6 +128,7 @@ _data = {
 }
 
 [node name="intro_seals" type="Node2D"]
+script = ExtResource("1_xfd4t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(575.5, 322.75)
@@ -164,3 +166,5 @@ text = "Capitulo 1: hogar de pol"
 [node name="cam_tink" type="AudioStreamPlayer2D" parent="."]
 
 [node name="vintage_cam" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

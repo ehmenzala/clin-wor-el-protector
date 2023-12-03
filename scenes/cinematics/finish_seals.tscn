@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://0us67yexn411"]
+[gd_scene load_steps=10 format=3 uid="uid://0us67yexn411"]
 
 [ext_resource type="Texture2D" uid="uid://bip6fy18h0ptw" path="res://assets/sprites/black-background.png" id="1_dvemu"]
+[ext_resource type="Script" path="res://scenes/cinematics/finish_seals.gd" id="1_n2k2t"]
 [ext_resource type="Texture2D" uid="uid://b3sskvsnkcciy" path="res://assets/images/cinematics/seals/finish/1.png" id="2_e7eig"]
 [ext_resource type="AudioStream" uid="uid://bi5wadvns5mcc" path="res://assets/sounds/bgmusic/that90skid Journey.wav" id="2_npfoe"]
 [ext_resource type="Texture2D" uid="uid://dlsglcuuf0278" path="res://assets/images/cinematics/seals/finish/2.png" id="3_v8sbu"]
@@ -107,6 +108,7 @@ _data = {
 }
 
 [node name="finish_seals" type="Node2D"]
+script = ExtResource("1_n2k2t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(577.5, 324.25)
@@ -141,3 +143,5 @@ theme_override_font_sizes/font_size = 32
 text = "El hogar de Pol esta a salvo"
 
 [node name="journey" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
