@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bn4auwcse7lc"]
+
+[ext_resource type="Texture2D" uid="uid://0vdwaewum7un" path="res://assets/sprites/vases_asset_pack/VasesAssetPackTransparent.png" id="1_jii0l"]
+[ext_resource type="Script" path="res://scenes/map_objects/boat_aka_door.gd" id="1_rub1m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_802xi"]
+atlas = ExtResource("1_jii0l")
+region = Rect2(0, 320, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dfvpq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_802xi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k38d7"]
+size = Vector2(32, 22)
+
+[node name="boat_aka_door" type="Node2D"]
+script = ExtResource("1_rub1m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2125, 0.2125)
+sprite_frames = SubResource("SpriteFrames_dfvpq")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_k38d7")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

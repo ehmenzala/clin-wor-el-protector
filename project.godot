@@ -14,6 +14,10 @@ config/name="clin-wor-el-protector"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Game="*res://scenes/globals/game.gd"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
