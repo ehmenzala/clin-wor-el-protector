@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://bhhrfnmmarshm"]
+[gd_scene load_steps=22 format=3 uid="uid://bhhrfnmmarshm"]
 
 [ext_resource type="Texture2D" uid="uid://dni1ksf8iq12n" path="res://assets/images/cinematics/intro/2.png" id="1_428dy"]
 [ext_resource type="AudioStream" uid="uid://cdnhg3j68mdy8" path="res://assets/sounds/bgmusic/that90skid Partycles.wav" id="1_hyntv"]
+[ext_resource type="Script" path="res://scenes/cinematics/cinematic.gd" id="1_r703h"]
 [ext_resource type="Texture2D" uid="uid://bip6fy18h0ptw" path="res://assets/sprites/black-background.png" id="1_t8ejc"]
 [ext_resource type="AudioStream" uid="uid://bgrrtlsl0io52" path="res://assets/sounds/bgmusic/that90skid Time flies.wav" id="1_xoe6f"]
 [ext_resource type="FontFile" uid="uid://d318tq22mnvib" path="res://assets/fonts/ARCADE_N.TTF" id="3_iuiaa"]
@@ -323,7 +324,7 @@ tracks/24/keys = {
 
 [sub_resource type="Animation" id="Animation_6l01v"]
 resource_name = "first_cinematic"
-length = 100.0
+length = 81.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -647,6 +648,7 @@ _data = {
 }
 
 [node name="cinematic" type="Node2D"]
+script = ExtResource("1_r703h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(578, 330.75)
@@ -855,3 +857,5 @@ text = "Clin Wor ira en busca de sus
 amigos para protegerlos..."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
