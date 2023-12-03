@@ -1,0 +1,166 @@
+[gd_scene load_steps=10 format=3 uid="uid://de05tlmipo17e"]
+
+[ext_resource type="Texture2D" uid="uid://bip6fy18h0ptw" path="res://assets/sprites/black-background.png" id="1_rp6r4"]
+[ext_resource type="AudioStream" uid="uid://cb8ewimdjqgk7" path="res://assets/sounds/soundfx/vintage-cam-tiquitiquitiqui.wav" id="2_jioc6"]
+[ext_resource type="AudioStream" uid="uid://dvtdhajomdclu" path="res://assets/sounds/soundfx/camera-tink-and-shoot.wav" id="3_gq1vg"]
+[ext_resource type="Texture2D" uid="uid://dsvhs4p02j6yl" path="res://assets/images/cinematics/seals/intro/1.png" id="4_2jwmh"]
+[ext_resource type="Texture2D" uid="uid://cx5cv0rj3qv35" path="res://assets/images/cinematics/seals/intro/2.png" id="5_hu6y4"]
+[ext_resource type="FontFile" uid="uid://d318tq22mnvib" path="res://assets/fonts/ARCADE_N.TTF" id="6_glpf5"]
+
+[sub_resource type="Animation" id="Animation_wd56h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("images/1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("images/2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1r6c3"]
+resource_name = "intro_seals"
+length = 9.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vintage_cam")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 3.36492,
+"start_offset": 0.0,
+"stream": ExtResource("2_jioc6")
+}],
+"times": PackedFloat32Array(-0.6)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.5, 2.8, 2.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("images/1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 3.1, 5.2, 5.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("cam_tink")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_gq1vg")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_gq1vg")
+}],
+"times": PackedFloat32Array(1, 3.5)
+}
+tracks/3/use_blend = true
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("images/2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(5.6, 5.7, 7.3, 7.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_id62n"]
+_data = {
+"RESET": SubResource("Animation_wd56h"),
+"intro_seals": SubResource("Animation_1r6c3")
+}
+
+[node name="intro_seals" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575.5, 322.75)
+scale = Vector2(31.2895, 19.4429)
+texture = ExtResource("1_rp6r4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "intro_seals"
+libraries = {
+"": SubResource("AnimationLibrary_id62n")
+}
+
+[node name="images" type="Node2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="images"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(576.667, 322.75)
+scale = Vector2(0.957778, 0.957778)
+texture = ExtResource("4_2jwmh")
+
+[node name="2" type="Sprite2D" parent="images"]
+position = Vector2(576.444, 328.75)
+scale = Vector2(0.960741, 0.960741)
+texture = ExtResource("5_hu6y4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 192.0
+offset_top = 274.0
+offset_right = 936.0
+offset_bottom = 310.0
+theme_override_fonts/font = ExtResource("6_glpf5")
+theme_override_font_sizes/font_size = 32
+text = "Capitulo 1: hogar de pol"
+
+[node name="cam_tink" type="AudioStreamPlayer2D" parent="."]
+
+[node name="vintage_cam" type="AudioStreamPlayer2D" parent="."]

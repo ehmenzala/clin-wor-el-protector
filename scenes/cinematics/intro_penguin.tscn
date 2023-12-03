@@ -1,0 +1,165 @@
+[gd_scene load_steps=10 format=3 uid="uid://b2nnd5ltoytkp"]
+
+[ext_resource type="Texture2D" uid="uid://bip6fy18h0ptw" path="res://assets/sprites/black-background.png" id="1_k44d1"]
+[ext_resource type="AudioStream" uid="uid://cb8ewimdjqgk7" path="res://assets/sounds/soundfx/vintage-cam-tiquitiquitiqui.wav" id="2_wienm"]
+[ext_resource type="AudioStream" uid="uid://dvtdhajomdclu" path="res://assets/sounds/soundfx/camera-tink-and-shoot.wav" id="3_daljs"]
+[ext_resource type="Texture2D" uid="uid://sjd680gr4dcw" path="res://assets/images/cinematics/penguin/intro/1.png" id="4_6vev5"]
+[ext_resource type="Texture2D" uid="uid://c5yxxsycksj2t" path="res://assets/images/cinematics/penguin/intro/2.png" id="5_yujfb"]
+[ext_resource type="FontFile" uid="uid://d318tq22mnvib" path="res://assets/fonts/ARCADE_N.TTF" id="6_ov74k"]
+
+[sub_resource type="Animation" id="Animation_qlpi0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("images/1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("images/2:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1jhuy"]
+resource_name = "intro_penguin"
+length = 10.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vintage_cam")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 4.03243,
+"start_offset": 0.0,
+"stream": ExtResource("2_wienm")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 0.6, 3.1, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("images/1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.4, 3.5, 5.1, 5.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("images/2:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(5.8, 5.9, 7.5, 7.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cam_tink")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_daljs")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_daljs")
+}],
+"times": PackedFloat32Array(1.2, 3.4)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xvugo"]
+_data = {
+"RESET": SubResource("Animation_qlpi0"),
+"intro_penguin": SubResource("Animation_1jhuy")
+}
+
+[node name="intro_penguin" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 327.25)
+scale = Vector2(31.4211, 19.7)
+texture = ExtResource("1_k44d1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "intro_penguin"
+libraries = {
+"": SubResource("AnimationLibrary_xvugo")
+}
+
+[node name="images" type="Node2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="images"]
+position = Vector2(574.667, 322.75)
+scale = Vector2(0.957778, 0.957778)
+texture = ExtResource("4_6vev5")
+
+[node name="2" type="Sprite2D" parent="images"]
+position = Vector2(574.889, 325.75)
+scale = Vector2(0.954815, 0.954815)
+texture = ExtResource("5_yujfb")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 91.0
+offset_top = 311.0
+offset_right = 1052.0
+offset_bottom = 347.0
+theme_override_fonts/font = ExtResource("6_ov74k")
+theme_override_font_sizes/font_size = 32
+text = "Capitulo 2: Hogar de Steban"
+
+[node name="cam_tink" type="AudioStreamPlayer2D" parent="."]
+
+[node name="vintage_cam" type="AudioStreamPlayer2D" parent="."]

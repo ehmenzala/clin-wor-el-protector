@@ -1,0 +1,143 @@
+[gd_scene load_steps=9 format=3 uid="uid://0us67yexn411"]
+
+[ext_resource type="Texture2D" uid="uid://bip6fy18h0ptw" path="res://assets/sprites/black-background.png" id="1_dvemu"]
+[ext_resource type="Texture2D" uid="uid://b3sskvsnkcciy" path="res://assets/images/cinematics/seals/finish/1.png" id="2_e7eig"]
+[ext_resource type="AudioStream" uid="uid://bi5wadvns5mcc" path="res://assets/sounds/bgmusic/that90skid Journey.wav" id="2_npfoe"]
+[ext_resource type="Texture2D" uid="uid://dlsglcuuf0278" path="res://assets/images/cinematics/seals/finish/2.png" id="3_v8sbu"]
+[ext_resource type="FontFile" uid="uid://d318tq22mnvib" path="res://assets/fonts/ARCADE_N.TTF" id="4_rvqbu"]
+
+[sub_resource type="Animation" id="Animation_tqcyj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("images/1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("images/2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l57xh"]
+resource_name = "finish_seals"
+length = 17.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("journey")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 40.5529,
+"start_offset": 0.0,
+"stream": ExtResource("2_npfoe")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(11.7, 12.1, 15.5, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("images/1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.593364, 3.7, 4.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("images/2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.9, 5.9, 8.8, 10.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tpai5"]
+_data = {
+"RESET": SubResource("Animation_tqcyj"),
+"finish_seals": SubResource("Animation_l57xh")
+}
+
+[node name="finish_seals" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577.5, 324.25)
+scale = Vector2(31.3947, 19.5286)
+texture = ExtResource("1_dvemu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "finish_seals"
+libraries = {
+"": SubResource("AnimationLibrary_tpai5")
+}
+
+[node name="images" type="Node2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="images"]
+position = Vector2(576.778, 324.25)
+scale = Vector2(0.956296, 0.956296)
+texture = ExtResource("2_e7eig")
+
+[node name="2" type="Sprite2D" parent="images"]
+position = Vector2(576.667, 324.75)
+scale = Vector2(0.957778, 0.957778)
+texture = ExtResource("3_v8sbu")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 132.0
+offset_top = 310.0
+offset_right = 1000.0
+offset_bottom = 346.0
+theme_override_fonts/font = ExtResource("4_rvqbu")
+theme_override_font_sizes/font_size = 32
+text = "El hogar de Pol esta a salvo"
+
+[node name="journey" type="AudioStreamPlayer2D" parent="."]

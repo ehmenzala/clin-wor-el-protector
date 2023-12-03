@@ -1,0 +1,279 @@
+[gd_scene load_steps=11 format=3 uid="uid://6v30hu853yc1"]
+
+[ext_resource type="Texture2D" uid="uid://bip6fy18h0ptw" path="res://assets/sprites/black-background.png" id="1_ad8qv"]
+[ext_resource type="AudioStream" uid="uid://cwliccorxub7x" path="res://assets/sounds/bgmusic/renny_init_3.wav" id="2_g0t4o"]
+[ext_resource type="Texture2D" uid="uid://cywgy018ypqgc" path="res://assets/images/cinematics/raindeer/intro/1.png" id="3_mfvhe"]
+[ext_resource type="Texture2D" uid="uid://qv3rnu7vmclb" path="res://assets/images/cinematics/raindeer/intro/2.png" id="4_ivstn"]
+[ext_resource type="FontFile" uid="uid://d318tq22mnvib" path="res://assets/fonts/ARCADE_N.TTF" id="5_2oqxn"]
+[ext_resource type="Texture2D" uid="uid://dj30e4dehulxt" path="res://assets/images/cinematics/raindeer/intro/3.png" id="5_n44mc"]
+[ext_resource type="Texture2D" uid="uid://c60q3bgbup48q" path="res://assets/images/cinematics/raindeer/intro/4.png" id="6_eu1hc"]
+
+[sub_resource type="Animation" id="Animation_8gj45"]
+resource_name = "intro_renny"
+length = 31.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("intro_renny")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_g0t4o")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("images/1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.8, 3.6, 7.5, 8.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("text/1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.7, 3.6, 7.5, 8.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("images/2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(9.4, 10.6102, 14.6, 15.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("text/2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(9.4, 10.6, 14.6, 15.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("text/3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(16.8004, 17.5937, 21.2655, 22.1842),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("images/3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(23.1201, 23.8565, 25.4604, 26.3474),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("images/4:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(26.9068, 27.7, 29.1, 30.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4bt06"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("images/1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("text/1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("images/2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("text/2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("text/3:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("images/3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("images/4:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_on2y7"]
+_data = {
+"RESET": SubResource("Animation_4bt06"),
+"intro_renny": SubResource("Animation_8gj45")
+}
+
+[node name="intro_renny" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(580.5, 333.25)
+scale = Vector2(31.5526, 20.0429)
+texture = ExtResource("1_ad8qv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "intro_renny"
+libraries = {
+"": SubResource("AnimationLibrary_on2y7")
+}
+
+[node name="images" type="Node2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="images"]
+position = Vector2(557, 254)
+scale = Vector2(0.745926, 0.745926)
+texture = ExtResource("3_mfvhe")
+
+[node name="2" type="Sprite2D" parent="images"]
+position = Vector2(570, 263)
+scale = Vector2(0.777037, 0.777037)
+texture = ExtResource("4_ivstn")
+
+[node name="3" type="Sprite2D" parent="images"]
+position = Vector2(573.889, 324.75)
+scale = Vector2(0.954815, 0.954815)
+texture = ExtResource("5_n44mc")
+
+[node name="4" type="Sprite2D" parent="images"]
+position = Vector2(574.667, 325.75)
+scale = Vector2(0.957778, 0.957778)
+texture = ExtResource("6_eu1hc")
+
+[node name="text" type="Node2D" parent="."]
+
+[node name="1" type="Label" parent="text"]
+offset_left = 139.0
+offset_top = 545.0
+offset_right = 980.0
+offset_bottom = 613.0
+theme_override_fonts/font = ExtResource("5_2oqxn")
+theme_override_font_sizes/font_size = 30
+text = "Pequeno Clin me alegro de que
+vengas a visitarnos"
+horizontal_alignment = 1
+
+[node name="2" type="Label" parent="text"]
+offset_left = 139.0
+offset_top = 545.0
+offset_right = 980.0
+offset_bottom = 613.0
+theme_override_fonts/font = ExtResource("5_2oqxn")
+theme_override_font_sizes/font_size = 30
+text = "No podria olvidarme de ustedes.
+Son muy importantes para mi"
+horizontal_alignment = 1
+
+[node name="3" type="Label" parent="text"]
+offset_left = 169.0
+offset_top = 280.0
+offset_right = 1010.0
+offset_bottom = 388.0
+theme_override_fonts/font = ExtResource("5_2oqxn")
+theme_override_font_sizes/font_size = 32
+text = "Pero ahora Renny corre
+un grave peligro junto a
+su familia"
+horizontal_alignment = 1
+
+[node name="intro_renny" type="AudioStreamPlayer2D" parent="."]
+volume_db = -6.933

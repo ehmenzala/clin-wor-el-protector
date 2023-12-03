@@ -1,0 +1,143 @@
+[gd_scene load_steps=9 format=3 uid="uid://dm62rupgkkob"]
+
+[ext_resource type="Texture2D" uid="uid://bip6fy18h0ptw" path="res://assets/sprites/black-background.png" id="1_xahrm"]
+[ext_resource type="AudioStream" uid="uid://4wjqs8803y1a" path="res://assets/sounds/bgmusic/happy_renny.wav" id="2_p48d6"]
+[ext_resource type="Texture2D" uid="uid://nikv4fwhb7ej" path="res://assets/images/cinematics/raindeer/finish/1.png" id="3_41nej"]
+[ext_resource type="Texture2D" uid="uid://djd3mfvbe04h0" path="res://assets/images/cinematics/raindeer/finish/2.png" id="4_er348"]
+[ext_resource type="FontFile" uid="uid://d318tq22mnvib" path="res://assets/fonts/ARCADE_N.TTF" id="5_pa4ij"]
+
+[sub_resource type="Animation" id="Animation_k77be"]
+resource_name = "finish_renny"
+length = 21.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 16.8066,
+"start_offset": 0.0,
+"stream": ExtResource("2_p48d6")
+}],
+"times": PackedFloat32Array(0.1)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("images/1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.8, 3.3, 6.2, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("images/2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(7.7, 9.3, 12, 13.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(14.494, 15.3902, 19.6, 21.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k31m0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("images/1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("images/2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qt8rj"]
+_data = {
+"RESET": SubResource("Animation_k31m0"),
+"finish_renny": SubResource("Animation_k77be")
+}
+
+[node name="finish_renny" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579.5, 325.75)
+scale = Vector2(31.5, 19.6143)
+texture = ExtResource("1_xahrm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "finish_renny"
+libraries = {
+"": SubResource("AnimationLibrary_qt8rj")
+}
+
+[node name="images" type="Node2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="images"]
+position = Vector2(577.778, 320.25)
+scale = Vector2(0.956296, 0.956296)
+texture = ExtResource("3_41nej")
+
+[node name="2" type="Sprite2D" parent="images"]
+position = Vector2(575, 323.75)
+scale = Vector2(0.951852, 0.951852)
+texture = ExtResource("4_er348")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 106.0
+offset_top = 310.0
+offset_right = 1067.0
+offset_bottom = 346.0
+theme_override_fonts/font = ExtResource("5_pa4ij")
+theme_override_font_sizes/font_size = 32
+text = "El hogar de Renny esta a salvo"
