@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://di27sad7ulde7" path="res://assets/images/earth.png" id="1_2j761"]
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="1_cqqf5"]
 [ext_resource type="Texture2D" uid="uid://cnfrq1s35s3g7" path="res://assets/images/clin-wor-portrait-lq.png" id="2_mgsog"]
+[ext_resource type="Texture2D" uid="uid://be5ur5kwroyuv" path="res://assets/images/main-menu-image.png" id="2_sqpkd"]
 [ext_resource type="FontFile" uid="uid://d318tq22mnvib" path="res://assets/fonts/ARCADE_N.TTF" id="4_p7el2"]
-[ext_resource type="Texture2D" uid="uid://db5bxel2y26o6" path="res://assets/sprites/sand-bg.png" id="5_w7j8p"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -15,31 +15,37 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cqqf5")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577.444, 329.75)
+scale = Vector2(0.960741, 0.960741)
+texture = ExtResource("2_sqpkd")
+
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 884.0
-offset_top = 391.0
-offset_right = 1120.0
-offset_bottom = 613.0
+offset_left = 881.0
+offset_top = 397.0
+offset_right = 1117.0
+offset_bottom = 619.0
 texture_normal = ExtResource("1_2j761")
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 2
-offset_left = 614.0
-offset_top = 189.0
-offset_right = 899.0
-offset_bottom = 236.0
+offset_left = 174.0
+offset_top = 269.0
+offset_right = 538.0
+offset_bottom = 329.0
 text = "Jugar"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
-offset_left = 612.0
-offset_top = 252.0
-offset_right = 896.0
-offset_bottom = 300.0
+offset_left = 566.0
+offset_top = 269.0
+offset_right = 939.0
+offset_bottom = 332.0
 text = "Salir"
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 z_index = -1
 layout_mode = 0
 offset_right = 641.0
@@ -48,31 +54,27 @@ texture = ExtResource("2_mgsog")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 63.0
-offset_right = 1077.0
-offset_bottom = 115.0
+offset_left = 192.0
+offset_top = 121.0
+offset_right = 1226.0
+offset_bottom = 225.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_p7el2")
 theme_override_font_sizes/font_size = 48
-text = "Clin Wor: El Protector"
+text = "Clin Wor:
+El Protector"
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 63.0
-offset_right = 1082.0
-offset_bottom = 115.0
-theme_override_colors/font_color = Color(0.0862745, 0.309804, 0.443137, 1)
+offset_left = 197.0
+offset_top = 121.0
+offset_right = 1231.0
+offset_bottom = 225.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.870588)
 theme_override_fonts/font = ExtResource("4_p7el2")
 theme_override_font_sizes/font_size = 48
-text = "Clin Wor: El Protector"
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(902, 324)
-scale = Vector2(7.33333, 9.68116)
-texture = ExtResource("5_w7j8p")
+text = "Clin Wor:
+El Protector"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
