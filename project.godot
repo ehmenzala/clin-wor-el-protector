@@ -10,13 +10,18 @@ config_version=5
 
 [application]
 
-config/name="clin-wor-el-protector"
+config/name="Clin Wor El Protector"
+run/main_scene="res://scenes/menu/menu.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Game="*res://scenes/globals/game.gd"
+
+[display]
+
+window/size/resizable=false
 
 [rendering]
 
