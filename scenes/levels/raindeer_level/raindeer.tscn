@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://s7d3wwrsg6wt"]
+[gd_scene load_steps=14 format=3 uid="uid://s7d3wwrsg6wt"]
 
 [ext_resource type="Texture2D" uid="uid://cuh0xav3qp6pk" path="res://assets/tilesets/fourseasons-tileset-v2/midground_/winter_.png" id="1_l57he"]
 [ext_resource type="Texture2D" uid="uid://dsspbo0impqda" path="res://assets/tilesets/fourseasons-tileset-v2/foreground_/foreground_.png" id="2_114ou"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cips0bej2hwxa" path="res://assets/tilesets/fourseasons-tileset-v2/background_/sky_.png" id="5_2w87k"]
 [ext_resource type="PackedScene" uid="uid://r4l1uc67gpde" path="res://scenes/map_objects/river.tscn" id="5_ckv6j"]
 [ext_resource type="Texture2D" uid="uid://jfaimvj1na0s" path="res://assets/tilesets/fourseasons-tileset-v2/objects_/staticObjects_.png" id="5_vu0wx"]
+[ext_resource type="PackedScene" uid="uid://cm2ij0vama365" path="res://scenes/objects/bad_pig.tscn" id="8_colse"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gy66n"]
 texture = ExtResource("1_l57he")
@@ -2071,3 +2072,65 @@ layer_2/tile_data = PackedInt32Array(1245212, 196610, 6, 1310748, 196610, 6, 137
 
 [node name="Clin Wor" parent="." instance=ExtResource("3_r5omg")]
 position = Vector2(56, 196)
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="bad_pig" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(278, 350)
+
+[node name="bad_pig2" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(490, 211)
+
+[node name="bad_pig13" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(254, 84)
+
+[node name="bad_pig14" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(583, 353)
+
+[node name="bad_pig15" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(775, 66)
+
+[node name="bad_pig16" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(936, 68)
+
+[node name="bad_pig17" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(1256, 257)
+
+[node name="bad_pig18" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(1358, 359)
+
+[node name="bad_pig19" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(1491, 195)
+
+[node name="bad_pig20" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(1817, 287)
+
+[node name="bad_pig3" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(345, 147)
+
+[node name="bad_pig4" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(454, 53)
+
+[node name="bad_pig5" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(1193, 106)
+
+[node name="bad_pig23" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(1068, 335)
+
+[node name="bad_pig28" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(1236, 354)
+
+[node name="bad_pig30" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(1134, 355)
+
+[node name="bad_pig26" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(924, 330)
+
+[node name="bad_pig11" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(1623, 226)
+
+[node name="bad_pig12" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(1686, 337)
+
+[node name="bad_pig8" parent="enemies" instance=ExtResource("8_colse")]
+position = Vector2(700, 312)

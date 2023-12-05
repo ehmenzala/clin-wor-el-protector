@@ -13,7 +13,7 @@ func _physics_process(delta):
 	if isChasing:
 		if get_node("AnimatedSprite2D").animation != "death":
 			get_node("AnimatedSprite2D").play("run")	
-		player = get_node("../Clin Wor")
+		player = get_node("../../Clin Wor")
 		var direction = (player.position - self.position).normalized()
 		if direction.x > 0:
 			get_node("AnimatedSprite2D").flip_h = true
