@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://vu6h0nkqfxw3"]
+[gd_scene load_steps=18 format=3 uid="uid://vu6h0nkqfxw3"]
 
 [ext_resource type="Texture2D" uid="uid://8hawiyhug3qh" path="res://assets/tilesets/fourseasons-tileset-v2/midground_/spring_.png" id="1_xq2f7"]
 [ext_resource type="Texture2D" uid="uid://ctm8xfvehatdo" path="res://assets/tilesets/fourseasons-tileset-v2/midground_/autumn_.png" id="2_7bjgs"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://q60g8n0865jd" path="res://scenes/map_objects/river_5.tscn" id="5_0il5b"]
 [ext_resource type="Texture2D" uid="uid://dsspbo0impqda" path="res://assets/tilesets/fourseasons-tileset-v2/foreground_/foreground_.png" id="5_1xn0t"]
 [ext_resource type="PackedScene" uid="uid://cm2ij0vama365" path="res://scenes/objects/bad_pig.tscn" id="9_eapbl"]
+[ext_resource type="Texture2D" uid="uid://crklr7caiep1n" path="res://assets/sprites/animals/gaviota-lenny.png" id="10_04smg"]
+[ext_resource type="Texture2D" uid="uid://dmyjryvoxgl8m" path="res://assets/sprites/animals/foca-pol.png" id="11_sg8yo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5wfwy"]
 texture = ExtResource("1_xq2f7")
@@ -2196,7 +2198,7 @@ layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array()
 
 [node name="Clin Wor" parent="." instance=ExtResource("2_bwgyh")]
-position = Vector2(42, 400)
+position = Vector2(48, 435)
 
 [node name="boat_aka_door" parent="." instance=ExtResource("3_gmr26")]
 position = Vector2(3235, 242)
@@ -2381,3 +2383,13 @@ position = Vector2(1594, 1201)
 
 [node name="bad_pig15" parent="enemies" instance=ExtResource("9_eapbl")]
 position = Vector2(1357, 1105)
+
+[node name="gaviota" type="Sprite2D" parent="."]
+position = Vector2(18, 614)
+scale = Vector2(0.173519, 0.173518)
+texture = ExtResource("10_04smg")
+
+[node name="foca" type="Sprite2D" parent="."]
+position = Vector2(3207, 223)
+scale = Vector2(0.267963, 0.267963)
+texture = ExtResource("11_sg8yo")
