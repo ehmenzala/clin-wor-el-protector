@@ -76,5 +76,14 @@ theme_override_font_sizes/font_size = 48
 text = "Clin Wor:
 El Protector"
 
+[node name="Credits" type="Button" parent="."]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 347.0
+offset_right = 736.0
+offset_bottom = 407.0
+text = "Créditos"
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

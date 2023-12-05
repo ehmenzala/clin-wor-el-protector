@@ -287,7 +287,8 @@ offset_right = 1067.0
 offset_bottom = 346.0
 theme_override_fonts/font = ExtResource("5_pa4ij")
 theme_override_font_sizes/font_size = 32
-text = "El hogar de Renny esta a salvo"
+text = "Ahora Renny esta a salvo"
+horizontal_alignment = 1
 
 [node name="MerryXMas" type="Label" parent="."]
 offset_left = 106.0

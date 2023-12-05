@@ -1,0 +1,844 @@
+[gd_scene load_steps=14 format=3 uid="uid://ha72wxpffgra"]
+
+[ext_resource type="Texture2D" uid="uid://c56t8h3k57d1h" path="res://assets/images/credits/fondo-creditos.png" id="1_0dxqx"]
+[ext_resource type="Script" path="res://scenes/cinematics/credits.gd" id="1_bj8db"]
+[ext_resource type="Texture2D" uid="uid://bip6fy18h0ptw" path="res://assets/sprites/black-background.png" id="2_iplk3"]
+[ext_resource type="AudioStream" uid="uid://cdnhg3j68mdy8" path="res://assets/sounds/bgmusic/that90skid Partycles.wav" id="4_h8mqo"]
+[ext_resource type="Texture2D" uid="uid://dgw0syimnytg0" path="res://assets/sprites/animals/renny.png" id="5_xap6c"]
+[ext_resource type="FontFile" uid="uid://d318tq22mnvib" path="res://assets/fonts/ARCADE_N.TTF" id="5_yxn0h"]
+[ext_resource type="Texture2D" uid="uid://crklr7caiep1n" path="res://assets/sprites/animals/gaviota-lenny.png" id="6_720uq"]
+[ext_resource type="Texture2D" uid="uid://y0e7g38eenae" path="res://assets/sprites/animals/pinguino-steban.png" id="7_3ee33"]
+[ext_resource type="Texture2D" uid="uid://dmyjryvoxgl8m" path="res://assets/sprites/animals/foca-pol.png" id="8_kw5wv"]
+[ext_resource type="Texture2D" uid="uid://bh2v06jy1kgnl" path="res://assets/sprites/clin-wor-credits.png" id="9_kh1r8"]
+
+[sub_resource type="Animation" id="Animation_02hmo"]
+resource_name = "credits"
+length = 82.286
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bgmusic")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_h8mqo")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("titles/title:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("persons/person:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("titles/title2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("persons/person2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("persons/person3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("persons/person4:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("titles/title3:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("persons/person6:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("titles/title4:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("persons/person7:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("persons/person8:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("titles/title5:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("persons/person5:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("persons/person9:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("persons/person10:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("persons/person11:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("persons/person12:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Menu:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 1, 80.3, 82.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("clin_wor_sprite:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(6.7, 11.511, 29, 32.1616, 33.0502, 36.467),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-37, 506), Vector2(1219, 506), Vector2(1219, 506), Vector2(-61, 506), Vector2(-61, 506), Vector2(1297, 506)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("animals/steban:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(13.9, 19.8206, 21.5375, 27.0089),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1376, 508), Vector2(-202, 508), Vector2(-202, 508), Vector2(1386, 508)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("animals/pol:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(21.5375, 27.0089),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-86, 544), Vector2(1502, 544)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("animals/renny:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(29.2517, 37.2814),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1662, 515), Vector2(-170, 515)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("animals/lenny:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(33.0502, 36.467),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-145, 531), Vector2(1213, 531)]
+}
+
+[sub_resource type="Animation" id="Animation_j1bc8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("titles/title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("persons/person:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("persons/person2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("persons/person3:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("persons/person6:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("persons/person7:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("persons/person8:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("persons/person4:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("persons/person5:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("persons/person9:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("persons/person10:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("persons/person11:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("persons/person12:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("titles/title2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("titles/title3:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("titles/title4:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("titles/title5:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Menu:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("clin_wor_sprite:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1219, 506)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("animals/steban:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-202, 508)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("animals/pol:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1502, 544)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("animals/renny:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-170, 515)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("animals/lenny:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1213, 531)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4u5qx"]
+_data = {
+"RESET": SubResource("Animation_j1bc8"),
+"credits": SubResource("Animation_02hmo")
+}
+
+[node name="credits" type="Node2D"]
+script = ExtResource("1_bj8db")
+
+[node name="darkbackground" type="Sprite2D" parent="."]
+position = Vector2(581, 328.75)
+scale = Vector2(31.5789, 19.7857)
+texture = ExtResource("2_iplk3")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(578, 322)
+scale = Vector2(0.962222, 0.962222)
+texture = ExtResource("1_0dxqx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "credits"
+libraries = {
+"": SubResource("AnimationLibrary_4u5qx")
+}
+
+[node name="images" type="Node2D" parent="."]
+
+[node name="animals" type="Node2D" parent="."]
+
+[node name="renny" type="Sprite2D" parent="animals"]
+position = Vector2(-170, 515)
+scale = Vector2(0.559259, 0.559259)
+texture = ExtResource("5_xap6c")
+
+[node name="lenny" type="Sprite2D" parent="animals"]
+position = Vector2(1213, 531)
+scale = Vector2(0.523518, 0.523519)
+texture = ExtResource("6_720uq")
+
+[node name="steban" type="Sprite2D" parent="animals"]
+position = Vector2(-202, 508)
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("7_3ee33")
+
+[node name="pol" type="Sprite2D" parent="animals"]
+position = Vector2(1502, 544)
+scale = Vector2(0.837778, 0.837778)
+texture = ExtResource("8_kw5wv")
+
+[node name="clin_wor_sprite" type="Sprite2D" parent="."]
+position = Vector2(1219, 506)
+texture = ExtResource("9_kh1r8")
+
+[node name="bgmusic" type="AudioStreamPlayer2D" parent="."]
+
+[node name="titles" type="Node2D" parent="."]
+
+[node name="title" type="Label" parent="titles"]
+offset_left = 201.0
+offset_top = 107.0
+offset_right = 480.0
+offset_bottom = 143.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 32
+text = "Narrativa"
+
+[node name="title2" type="Label" parent="titles"]
+offset_left = 201.0
+offset_top = 196.0
+offset_right = 728.0
+offset_bottom = 232.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 32
+text = "DIseno de niveles"
+
+[node name="title3" type="Label" parent="titles"]
+offset_left = 201.0
+offset_top = 346.0
+offset_right = 575.0
+offset_bottom = 382.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 32
+text = "Banda sonora"
+
+[node name="title4" type="Label" parent="titles"]
+offset_left = 201.0
+offset_top = 432.0
+offset_right = 573.0
+offset_bottom = 468.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 32
+text = "Sponsors"
+
+[node name="title5" type="Label" parent="titles"]
+offset_left = 786.0
+offset_top = 152.0
+offset_right = 1041.0
+offset_bottom = 188.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 32
+text = "Mentores"
+
+[node name="persons" type="Node2D" parent="."]
+
+[node name="person" type="Label" parent="persons"]
+offset_left = 201.0
+offset_top = 140.0
+offset_right = 480.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Jefferson Vega"
+vertical_alignment = 1
+
+[node name="person2" type="Label" parent="persons"]
+offset_left = 201.0
+offset_top = 230.0
+offset_right = 480.0
+offset_bottom = 266.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Jefferson Vega"
+vertical_alignment = 1
+
+[node name="person3" type="Label" parent="persons"]
+offset_left = 201.0
+offset_top = 261.0
+offset_right = 480.0
+offset_bottom = 297.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Esteban Huaman"
+vertical_alignment = 1
+
+[node name="person6" type="Label" parent="persons"]
+offset_left = 201.0
+offset_top = 381.0
+offset_right = 480.0
+offset_bottom = 417.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Esteban Huaman"
+vertical_alignment = 1
+
+[node name="person7" type="Label" parent="persons"]
+offset_left = 201.0
+offset_top = 469.0
+offset_right = 765.0
+offset_bottom = 505.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Universidad tecnologica del peru"
+vertical_alignment = 1
+
+[node name="person8" type="Label" parent="persons"]
+offset_left = 201.0
+offset_top = 500.0
+offset_right = 765.0
+offset_bottom = 536.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Endless Studios"
+vertical_alignment = 1
+
+[node name="person4" type="Label" parent="persons"]
+offset_left = 201.0
+offset_top = 295.0
+offset_right = 480.0
+offset_bottom = 331.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Jhan Pol"
+vertical_alignment = 1
+
+[node name="person5" type="Label" parent="persons"]
+offset_left = 785.0
+offset_top = 189.0
+offset_right = 1067.0
+offset_bottom = 225.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Alejandro Farfan"
+vertical_alignment = 1
+
+[node name="person9" type="Label" parent="persons"]
+offset_left = 785.0
+offset_top = 225.0
+offset_right = 1067.0
+offset_bottom = 261.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Miguel Varas"
+vertical_alignment = 1
+
+[node name="person10" type="Label" parent="persons"]
+offset_left = 785.0
+offset_top = 256.0
+offset_right = 1103.0
+offset_bottom = 292.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Julieta Ladstatter"
+vertical_alignment = 1
+
+[node name="person11" type="Label" parent="persons"]
+offset_left = 785.0
+offset_top = 291.0
+offset_right = 1103.0
+offset_bottom = 327.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Andrea Pavon"
+vertical_alignment = 1
+
+[node name="person12" type="Label" parent="persons"]
+offset_left = 785.0
+offset_top = 325.0
+offset_right = 1103.0
+offset_bottom = 361.0
+theme_override_fonts/font = ExtResource("5_yxn0h")
+theme_override_font_sizes/font_size = 18
+text = "Manuel Quinones"
+vertical_alignment = 1
+
+[node name="Menu" type="Button" parent="."]
+offset_left = 1018.0
+offset_top = 479.0
+offset_right = 1127.0
+offset_bottom = 543.0
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]

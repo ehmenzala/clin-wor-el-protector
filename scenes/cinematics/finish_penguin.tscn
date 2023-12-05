@@ -328,7 +328,8 @@ offset_right = 1067.0
 offset_bottom = 346.0
 theme_override_fonts/font = ExtResource("5_hyrsf")
 theme_override_font_sizes/font_size = 32
-text = "El hogar de Steban esta a salvo"
+text = "Ahora Steban esta a salvo"
+horizontal_alignment = 1
 
 [node name="Fin" type="Label" parent="."]
 modulate = Color(1, 1, 1, 0)

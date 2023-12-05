@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bhhrfnmmarshm"]
+[gd_scene load_steps=21 format=3 uid="uid://bhhrfnmmarshm"]
 
 [ext_resource type="Texture2D" uid="uid://dni1ksf8iq12n" path="res://assets/images/cinematics/intro/2.png" id="1_428dy"]
 [ext_resource type="AudioStream" uid="uid://cdnhg3j68mdy8" path="res://assets/sounds/bgmusic/that90skid Partycles.wav" id="1_hyntv"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://2abao1w7wuex" path="res://assets/images/cinematics/intro/10.png" id="12_opprw"]
 [ext_resource type="Texture2D" uid="uid://7xdwwy60jk33" path="res://assets/images/cinematics/intro/11.png" id="13_5dq1w"]
 [ext_resource type="Texture2D" uid="uid://c3v0a1s5m7p5v" path="res://assets/images/cinematics/intro/12.png" id="14_limee"]
-[ext_resource type="Texture2D" uid="uid://exv524dlit54" path="res://assets/images/cinematics/intro/13.png" id="15_8psnf"]
 
 [sub_resource type="Animation" id="Animation_wak28"]
 length = 0.001
@@ -312,7 +311,7 @@ tracks/23/keys = {
 tracks/24/type = "value"
 tracks/24/imported = false
 tracks/24/enabled = true
-tracks/24/path = NodePath("Images/13:modulate")
+tracks/24/path = NodePath("SkipButton:modulate")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/keys = {
@@ -324,7 +323,7 @@ tracks/24/keys = {
 tracks/25/type = "value"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("SkipButton:modulate")
+tracks/25/path = NodePath("Text/12:modulate")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
@@ -575,10 +574,10 @@ tracks/19/path = NodePath("Images/8:modulate")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
-"times": PackedFloat32Array(57.4, 58.9816, 60.2226),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(57.1, 58.5, 61.5, 63.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/20/type = "value"
 tracks/20/imported = false
@@ -587,7 +586,7 @@ tracks/20/path = NodePath("Images/9:modulate")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
-"times": PackedFloat32Array(60.2, 61.3925, 62.503),
+"times": PackedFloat32Array(63.2, 64.4, 65.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -599,7 +598,7 @@ tracks/21/path = NodePath("Images/10:modulate")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
-"times": PackedFloat32Array(62.6, 64.3, 65.1, 66.3),
+"times": PackedFloat32Array(65.6, 67.3, 68.1, 69.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -611,7 +610,7 @@ tracks/22/path = NodePath("Text/11:modulate")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
-"times": PackedFloat32Array(62.6, 64.3, 65.1, 66.3),
+"times": PackedFloat32Array(65.6, 67.3, 68.1, 69.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -623,7 +622,7 @@ tracks/23/path = NodePath("Images/11:modulate")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/keys = {
-"times": PackedFloat32Array(66.3, 67.7, 69),
+"times": PackedFloat32Array(69.3, 70.7, 72),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -635,7 +634,7 @@ tracks/24/path = NodePath("Images/12:modulate")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/keys = {
-"times": PackedFloat32Array(68.8, 70.1, 71.5),
+"times": PackedFloat32Array(71.8, 73.1, 74.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -643,23 +642,23 @@ tracks/24/keys = {
 tracks/25/type = "value"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("Images/13:modulate")
+tracks/25/path = NodePath("SkipButton:modulate")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
-"times": PackedFloat32Array(71.3, 72.4, 73.8),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(11.0105, 11.7526, 75.4, 76.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/26/type = "value"
 tracks/26/imported = false
 tracks/26/enabled = true
-tracks/26/path = NodePath("SkipButton:modulate")
+tracks/26/path = NodePath("Text/12:modulate")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/keys = {
-"times": PackedFloat32Array(11.0105, 11.7526, 72.4, 73.8),
+"times": PackedFloat32Array(57.2, 58.6, 61.5, 63.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -724,8 +723,8 @@ scale = Vector2(0.735556, 0.735556)
 texture = ExtResource("9_h441s")
 
 [node name="8" type="Sprite2D" parent="Images"]
-position = Vector2(575.444, 323.375)
-scale = Vector2(0.952222, 0.952222)
+position = Vector2(569.966, 263)
+scale = Vector2(0.773333, 0.773333)
 texture = ExtResource("10_bgpoh")
 
 [node name="9" type="Sprite2D" parent="Images"]
@@ -747,11 +746,6 @@ texture = ExtResource("13_5dq1w")
 position = Vector2(572.111, 322.75)
 scale = Vector2(0.951852, 0.951852)
 texture = ExtResource("14_limee")
-
-[node name="13" type="Sprite2D" parent="Images"]
-position = Vector2(576.111, 322.75)
-scale = Vector2(0.951852, 0.951852)
-texture = ExtResource("15_8psnf")
 
 [node name="Audio" type="Node2D" parent="."]
 
@@ -879,6 +873,18 @@ theme_override_fonts/font = ExtResource("3_iuiaa")
 theme_override_font_sizes/font_size = 30
 text = "Clin Wor ira en busca de sus
 amigos para protegerlos..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="12" type="Label" parent="Text"]
+offset_left = 41.875
+offset_top = 531.0
+offset_right = 1114.88
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("3_iuiaa")
+theme_override_font_sizes/font_size = 30
+text = "“Trae a tu familia. Aqui encontraran
+refugio. Yo los protegere”"
 horizontal_alignment = 1
 vertical_alignment = 1
 

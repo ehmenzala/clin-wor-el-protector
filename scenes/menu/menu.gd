@@ -12,3 +12,7 @@ func _on_button_pressed():
 
 func _on_play_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/cinematics/cinematic.tscn")
+
+
+func _on_credits_pressed():
+	get_tree().change_scene_to_file("res://scenes/cinematics/credits.tscn")
