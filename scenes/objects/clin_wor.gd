@@ -10,6 +10,12 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	animationNode.play("idle")
+	
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_R:
+			self.position.x = 50
+			self.position.y = 50
 
 func _physics_process(delta):
 	# Add the gravity.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://vu6h0nkqfxw3"]
+[gd_scene load_steps=25 format=3 uid="uid://vu6h0nkqfxw3"]
 
 [ext_resource type="Texture2D" uid="uid://8hawiyhug3qh" path="res://assets/tilesets/fourseasons-tileset-v2/midground_/spring_.png" id="1_xq2f7"]
 [ext_resource type="Texture2D" uid="uid://ctm8xfvehatdo" path="res://assets/tilesets/fourseasons-tileset-v2/midground_/autumn_.png" id="2_7bjgs"]
@@ -11,6 +11,13 @@
 [ext_resource type="PackedScene" uid="uid://cm2ij0vama365" path="res://scenes/objects/bad_pig.tscn" id="9_eapbl"]
 [ext_resource type="Texture2D" uid="uid://crklr7caiep1n" path="res://assets/sprites/animals/gaviota-lenny.png" id="10_04smg"]
 [ext_resource type="Texture2D" uid="uid://dmyjryvoxgl8m" path="res://assets/sprites/animals/foca-pol.png" id="11_sg8yo"]
+[ext_resource type="Texture2D" uid="uid://chngrqaesdoud" path="res://assets/images/keys/arr-down-key.png" id="12_o0wai"]
+[ext_resource type="Texture2D" uid="uid://dk42yt4ao6kbl" path="res://assets/images/keys/arr-left-key.png" id="13_jjduh"]
+[ext_resource type="Texture2D" uid="uid://6c5nfccw8gl8" path="res://assets/images/keys/arr-right-key.png" id="14_mj202"]
+[ext_resource type="Texture2D" uid="uid://biuwpiwwoo01p" path="res://assets/images/keys/arr-up-key.png" id="15_5bunr"]
+[ext_resource type="Texture2D" uid="uid://ds816c0mlsfu4" path="res://assets/images/keys/r-key.png" id="16_oferu"]
+[ext_resource type="Texture2D" uid="uid://c86rgxw3nfjff" path="res://assets/images/keys/spacebar-key.png" id="17_oedej"]
+[ext_resource type="PackedScene" uid="uid://b0xc1qdyjc71h" path="res://scenes/health_dashboard/health_dashboard.tscn" id="18_4mubx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5wfwy"]
 texture = ExtResource("1_xq2f7")
@@ -2385,11 +2392,47 @@ position = Vector2(1594, 1201)
 position = Vector2(1357, 1105)
 
 [node name="gaviota" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(18, 614)
 scale = Vector2(0.173519, 0.173518)
 texture = ExtResource("10_04smg")
 
 [node name="foca" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(3207, 223)
 scale = Vector2(0.267963, 0.267963)
 texture = ExtResource("11_sg8yo")
+
+[node name="keys" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="keys"]
+position = Vector2(95.7778, 517)
+scale = Vector2(0.441667, 0.441667)
+texture = ExtResource("12_o0wai")
+
+[node name="Sprite2D2" type="Sprite2D" parent="keys"]
+position = Vector2(61.8889, 518)
+scale = Vector2(0.418519, 0.418519)
+texture = ExtResource("13_jjduh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="keys"]
+position = Vector2(137.889, 515)
+scale = Vector2(0.459259, 0.459259)
+texture = ExtResource("14_mj202")
+
+[node name="Sprite2D4" type="Sprite2D" parent="keys"]
+position = Vector2(95.7777, 482)
+scale = Vector2(0.437037, 0.437037)
+texture = ExtResource("15_5bunr")
+
+[node name="Sprite2D5" type="Sprite2D" parent="keys"]
+position = Vector2(137, 481)
+scale = Vector2(0.440741, 0.440741)
+texture = ExtResource("16_oferu")
+
+[node name="Sprite2D6" type="Sprite2D" parent="keys"]
+position = Vector2(88, 549)
+scale = Vector2(0.320833, 0.320833)
+texture = ExtResource("17_oedej")
+
+[node name="health_dashboard" parent="." instance=ExtResource("18_4mubx")]
